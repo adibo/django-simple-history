@@ -14,6 +14,8 @@ class HistoryDescriptor(object):
 
 
 class HistoryManager(models.Manager):
+    use_in_migrations = True
+
     def __init__(self, model, instance=None):
         super(HistoryManager, self).__init__()
         self.model = model
